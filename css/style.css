@@ -49,7 +49,18 @@ body{
     font-size: 24px;
     font-weight: bold;
 }
-/* hero-container */
+/* hamburger menu */
+.menu-line{
+    width: 20px;
+    height: 3px;
+    background-color: var(--defaultwhite);
+    margin-bottom: 3px;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+/* hero-container */ 
 .hero{
     flex-basis: 50%;
     background-color:var(--mainpurple);
@@ -726,7 +737,40 @@ main{
     .nav-links li{
         margin-inline: 5px;
     }
-
+}
+@media (max-width:640px){
+    .landing-container{
+        flex-direction: column;
+    }
+    .hero{
+        flex-basis: 100%;
+    }
+    .hero-content{
+        flex-basis: 100%;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav-links ul{
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .nav-links li{
+        padding: 10px 0;
+    }
+    .header-logo{
+        align-self: flex-start;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 60px;
+    }
+    .nav-links ul.showmenu {
+        display: flex;
+    }
 }
 
 @media (max-width: 480px) {
@@ -738,7 +782,7 @@ main{
         text-align: center;
     }
     .pop-cat-list{
-        flex-basis: 48%;
+        flex-basis: 50%;
     }
     .product-list, .new-product-list, .seasonal-list, .offer-list, .connection-list, .choose-reason-list {
         flex-basis: 100%;
